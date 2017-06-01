@@ -1,0 +1,4 @@
+
+def build(ctx):
+    ctx.env.append_value('INCLUDES', ctx.path.abspath())
+    ctx.stlib(source="lib_b.cpp", target="libB", includes=["."], cxxflags="/D_DEBUG /Od /EHsc /D_WINDOWS /MDd")

@@ -1,0 +1,7 @@
+
+def build(ctx):
+    ctx.env.append_value('INCLUDES', ctx.path.abspath())
+    ctx.shlib(source="lib_a.cpp", target="libA", includes=["."],
+              cxxflags="/D_DEBUG /Od /EHsc /D_WINDOWS /MDd",
+              install_path = ctx.out_dir + "/bin"
+              )

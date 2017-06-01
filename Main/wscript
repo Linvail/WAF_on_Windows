@@ -1,0 +1,6 @@
+
+def build(ctx):
+    ctx.program(source="main.cpp", target="main", includes=ctx.env['INCLUDES'] ,
+                use="libA libB", cxxflags="/D_DEBUG /Od /EHsc /D_WINDOWS /MDd",
+                install_path = ctx.out_dir + "/bin"
+                )

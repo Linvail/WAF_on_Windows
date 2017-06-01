@@ -1,0 +1,4 @@
+
+def build(ctx):
+    ctx.recurse('LibA')
+    ctx.recurse('LibB')
